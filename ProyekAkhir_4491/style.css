@@ -14,14 +14,29 @@
 /* TODO CSS-01: Atur jenis font, warna teks, warna latar belakang,
    margin, dan padding dasar halaman. */
 body {
-}
+  background-color: lightgray;
 
+}
+h1 {
+  font-style: italic;
+  color: crimson;
+
+}
+* {
+  margin: auto;
+  padding: auto;
+
+}
 /* TODO CSS-02: Atur lebar konten, posisi, padding, margin,
    border dan border-radius seperlunya. */
 .container {
+  width: 100px;
+  height: auto;
+  border-radius: 0px;
 }
 
 .kepala-halaman {
+
 }
 
 .panel {
