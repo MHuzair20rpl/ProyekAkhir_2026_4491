@@ -14,67 +14,105 @@
 /* TODO CSS-01: Atur jenis font, warna teks, warna latar belakang,
    margin, dan padding dasar halaman. */
 body {
+  font-family: Arial, sans-serif;
   background-color: lightgray;
+  color: #333333;
+  margin: 0;
+  padding: 20px;
 
 }
 h1 {
-  font-style: italic;
+  font-family: "Times New Roman", serif;
   color: crimson;
-
+  text-align: center;
 }
-* {
-  margin: auto;
-  padding: auto;
 
-}
 /* TODO CSS-02: Atur lebar konten, posisi, padding, margin,
    border dan border-radius seperlunya. */
 .container {
-  width: 100px;
-  height: auto;
-  border-radius: 0px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0% auto;
 }
 
 .kepala-halaman {
-
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .panel {
+  background-color: #00eeff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 10px solid #ff0000;
+  border-radius: 20px;
 }
 
 /* TODO CSS-03: Atur ukuran input, padding, jarak antar elemen,
    warna tombol, dan tampilan yang konsisten. */
 .form-baris {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
 .form-baris label {
+  font-weight: bold;
 }
 
 .form-baris input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .aksi {
+  display: flex;
+  gap: 10px;
 }
 
 .aksi button {
+  padding: 10px 20px;
+  background-color: #f40303;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* TODO CSS-04: Rapikan daftar kegiatan, jumlah kegiatan, dan pesan
    status. Bedakan tampilan status berhasil dan gagal. */
 #daftarKegiatan {
+  padding-left: 20px;
 }
 
 #daftarKegiatan li {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #e1ff00;
+  border-radius: 5px;
 }
 
 .ringkasan {
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 #pesanStatus {
+  color: #d9ff00;
+  background-color: #ffffff;
 }
 
+
 #pesanStatus.berhasil {
+  color: #26ff00;
+  background-color: #206d11;
 }
 
 #pesanStatus.gagal {
+  color: #ff0000;
+  background-color: #ffebee;
 }
