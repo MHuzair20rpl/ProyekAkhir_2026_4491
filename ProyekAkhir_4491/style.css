@@ -41,10 +41,10 @@ h1 {
 }
 
 .panel {
-  background-color: #00eeff;
+  background-color: #5e8486;
   padding: 20px;
   margin-bottom: 20px;
-  border: 10px solid #ff0000;
+  border: 10px solid #150909;
   border-radius: 20px;
 }
 
@@ -92,7 +92,7 @@ h1 {
 #daftarKegiatan li {
   padding: 10px;
   margin-bottom: 8px;
-  background-color: #b8b8b8;
+  background-color: #d4d4d4;
   border-radius: 5px;
 }
 

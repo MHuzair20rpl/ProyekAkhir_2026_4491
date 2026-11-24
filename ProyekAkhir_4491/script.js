@@ -32,11 +32,11 @@ function tampilkanKegiatan(daftar) {
 
    // TODO JS-02:
   // Ganti string kosong dengan elemen Array 'daftar' pada indeks i.
-    const daftarKegiatan = [i];
+    const namaKegiatan = daftar[i];
 
     // Disediakan guru: pembentukan dan penampilan elemen HTML.
     const item = document.createElement("li");
-    item.textContent = daftarKegiatan;
+    item.textContent = namaKegiatan;
     elemenDaftar.appendChild(item);
   }
 }
@@ -136,19 +136,21 @@ function tambahKegiatan(daftar, nama) {
 
   // TODO JS-03: Simpan nama yang sudah di-trim ke variabel namaBersih.
   // Jika namaBersih kosong, gunakan return false.
-const namaBersih =nama.trim();
-if (namaBersih === "");
-return false;
+const namaBersih = nama.trim();
+if (namaBersih === ""){
+  return false;
+}
+
   // TODO JS-04: Gunakan includes() untuk menolak nama duplikat.
-if(daftar.includes(namaBersih));{
-  return true;
+if (daftar.includes(namaBersih)) {
+  return false;
 }
   // Jika kegiatan sudah ada, gunakan return false.
 
   // TODO JS-05: Gunakan push() untuk menambahkan namaBersih.
-daftar.push(namaBersih);{
+daftar.push(namaBersih);
   return true;
-}
+
   // Jika penambahan berhasil, gunakan return true.
 
    // SEMENTARA: ganti/hapus setelah TODO JS-03 s.d. JS-05 selesai
@@ -160,24 +162,27 @@ daftar.push(namaBersih);{
   // Cari posisi kegiatan dengan indexOf(), lalu kembalikan indeksnya.
 
   // Jika tidak ditemukan, indexOf() akan menghasilkan -1.
-const namaBersih = nama.trim();
-return daftar.indexOf(namaBersih);
-  return -1; // SEMENTARA: ganti setelah TODO JS-06 selesai
+function cariKegiatan(daftar, nama) {
+  const namaBersih = nama.trim();
+  return daftar.indexOf(namaBersih);
+}// SEMENTARA: ganti setelah TODO JS-06 selesai
 
 
 // TODO JS-07 dan JS-08 — Penghapusan kegiatan
 function hapusKegiatan(daftar, nama) {
+  const indeks = cariKegiatan(daftar, nama);
   // TODO JS-07: Panggil cariKegiatan(daftar, nama).
   // Simpan hasilnya dalam variabel indeks.
-const indeks = cariKegiatan(daftar, nama);
+
 if (indeks === -1){
   return false;
 }
-  // TODO JS-08: Jika indeks bernilai -1, gunakan return false.
+// TODO JS-08: Jika indeks bernilai -1, gunakan return false.
   // Jika ditemukan, hapus satu elemen menggunakan splice().
   // Kembalikan true jika penghapusan berhasil.
 daftar.splice(indeks, 1);
 return true;
+
 // SEMENTARA: ganti/hapus setelah TODO JS-07 s.d. JS-08 selesai
 }
 
@@ -185,6 +190,6 @@ return true;
 function hitungJumlahKegiatan(daftar) {
   // TODO JS-09: Gunakan length dan return untuk menghasilkan jumlah kegiatan.
 return daftar.length;
-  return 0; // SEMENTARA: ganti setelah TODO JS-09 selesai
+   // SEMENTARA: ganti setelah TODO JS-09 selesai
 }
 
